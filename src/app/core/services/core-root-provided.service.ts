@@ -6,7 +6,9 @@ console.log('CoreRootProvidedService file\n==============================');
 })
 export class CoreRootProvidedService {
 
-  constructor() { }
+  constructor() {
+    console.log('CoreRootProvidedService instance created');
+  }
 
   log(): void {
     console.log('CoreRootProvidedService');

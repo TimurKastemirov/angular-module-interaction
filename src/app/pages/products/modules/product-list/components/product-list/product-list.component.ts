@@ -5,6 +5,9 @@ import { FeatureRootProvidedService } from '../../../../../../feature/services/f
 import { FeatureModuleProvidedService } from '../../../../../../feature/services/feature-module-provided.service';
 import { ProductsRootProvidedService } from '../../../../services/products-root-provided.service';
 import { ProductsModuleProvidedService } from '../../../../services/products-module-provided.service';
+import { ProvidedInAppComponentService } from '../../../../../../services/provided-in-app-component.service';
+import { CoreRootProvidedService } from '../../../../../../core/services/core-root-provided.service';
+import { CoreModuleProvidedService } from '../../../../../../core/services/core-module-provided.service';
 
 @Component({
   selector: 'app-product-list',
@@ -20,8 +23,13 @@ export class ProductListComponent implements OnInit {
     private productsRootProvidedService: ProductsRootProvidedService,
     private productsModuleProvidedService: ProductsModuleProvidedService,
 
+    private coreRootProvidedService: CoreRootProvidedService,
+    private coreModuleProvidedService: CoreModuleProvidedService,
+
     private featureRootProvidedService: FeatureRootProvidedService,
     private featureModuleProvidedService: FeatureModuleProvidedService,
+
+    private providedInAppComponentService: ProvidedInAppComponentService,
   ) { }
 
   ngOnInit(): void {
@@ -31,7 +39,12 @@ export class ProductListComponent implements OnInit {
     this.productsRootProvidedService.log();
     this.productsModuleProvidedService.log();
 
+    this.coreRootProvidedService.log();
+    this.coreModuleProvidedService.log();
+
     this.featureRootProvidedService.log();
     this.featureModuleProvidedService.log();
+
+    this.providedInAppComponentService.log();
   }
 }

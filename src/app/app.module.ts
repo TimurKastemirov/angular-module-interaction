@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { DeclaredInAppModuleComponent } from './components/declared-in-app-module/declared-in-app-module.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DeclaredInAppModuleComponent
   ],
   imports: [
     BrowserModule,
@@ -15,6 +17,9 @@ import { CoreModule } from './core/core.module';
     CoreModule,
   ],
   providers: [],
+  exports: [
+    DeclaredInAppModuleComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
