@@ -7,16 +7,15 @@ import { CoreModule } from './core/core.module';
 import { DeclaredInAppModuleComponent } from './components/declared-in-app-module/declared-in-app-module.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CoreModule.forRoot({ key: 'value', anyKeys: 'anyStringValues' }),
+  ],
   declarations: [
     AppComponent,
     DeclaredInAppModuleComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CoreModule,
-  ],
-  providers: [],
   exports: [
     DeclaredInAppModuleComponent
   ],

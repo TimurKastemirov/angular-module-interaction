@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 
-console.log('CoreRootProvidedService file\n==============================');
+console.log('%c CoreRootProvidedService file', 'color: red; font-size: 18px; font-weight: bold');
 @Injectable({
   providedIn: 'root'
 })
 export class CoreRootProvidedService {
 
   constructor() {
-    console.log('CoreRootProvidedService instance created');
+    console.log('%c CoreRootProvidedService instance created', 'color: red; font-size: 15px');
   }
 
   log(): void {
-    console.log('CoreRootProvidedService');
+    console.log('%c CoreRootProvidedService.log', 'color: red');
   }
 }

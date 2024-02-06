@@ -76,7 +76,12 @@ if we inject service A that is provided in root into a multiple services or comp
 ## Provided in component services
 
 # Components, directives and pipes
-All components, directives and pipes are visible only from the module where they are declared, unless they are exported from the module and imported to another module.
-If we need to use a component, directive or pipe from another module, we need to export it from the module where it is declared and import it into the module where we want to use it.
-Components, directives and pipes that are declared in the AppModule are visible only in AppModule's components and to make them visible in other modules, we need to export them from the AppModule and import AppModule (what is NOT RECOMMENDED TO DO) into the module where we want to use them.
+All components, directives and pipes are visible only from the module where they are declared, unless they are exported from the module and this module is imported to another module.
+
+If we need to use a component, directive or pipe from another module, we need to export them from the module where they are declared and import their module into the module where we want to use them.
+
+Examples:
+1) Components, directives and pipes that are declared in the AppModule are visible only for AppModule's components and to make them visible in other modules, we need to export them from the AppModule and import AppModule (what is NOT RECOMMENDED TO DO) into the module where we want to use them.
+2) Components, directives and pipes that are declared in the AppModule are NOT visible in CoreModule's components which is imported in AppModule. To make them visible in AppModule.
+
 So components, directives and pipes are module scoped and are visible only from the module where they are declared or from the module where their module is imported.
